@@ -1,5 +1,6 @@
 package com.hipter57.bitofeverything;
 
+import com.hipter57.bitofeverything.init.ModItems;
 import com.hipter57.bitofeverything.proxy.CommonProxy;
 import com.hipter57.bitofeverything.util.Logger;
 import net.minecraftforge.fml.common.Mod;
@@ -23,6 +24,9 @@ public class BitOfEverything {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event){
         logger.info("Hello Minecraft!");
+        ModItems.init();
+        ModItems.register();
+
         proxy.registerRenders();
     }
 
