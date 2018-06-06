@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
+  "modid": "boe",
+  "name": "Bit of Everything",
+  "description": "Adds some different stuff.",
+  "version": "0.1.0",
+  "mcversion": "1.10.2",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["XuTTcTeP"],
+  "credits": "Two thousand years ago...",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
