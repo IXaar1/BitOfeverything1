@@ -11,7 +11,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import org.apache.logging.log4j.Logger;
 
 public class ModItems {
-    public static final Logger logger = BitOfEverything.logger;
+    public static Logger logger = BitOfEverything.logger;
 
     public static Item itemTinIngot;
 
@@ -35,7 +35,7 @@ public class ModItems {
 
     public static void registerItem(Item item){
         GameRegistry.register(item);
-        logger.info("Registered item " + Reference.MODID + ":" + item.getUnlocalizedName().substring(5));
+        logger.info("Registered item: " + Reference.MODID + ":" + item.getUnlocalizedName().substring(5));
     }
 
     public static void registerRender(Item item){
