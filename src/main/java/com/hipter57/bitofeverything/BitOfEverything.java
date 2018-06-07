@@ -2,6 +2,7 @@ package com.hipter57.bitofeverything;
 
 import com.hipter57.bitofeverything.init.ModBlocks;
 import com.hipter57.bitofeverything.init.ModItems;
+import com.hipter57.bitofeverything.init.ModTools;
 import com.hipter57.bitofeverything.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -28,6 +29,8 @@ public class BitOfEverything {
         ModItems.register();
         ModBlocks.init();
         ModBlocks.register();
+        ModTools.init();
+        ModTools.register();
 
         proxy.registerRenders();
     }

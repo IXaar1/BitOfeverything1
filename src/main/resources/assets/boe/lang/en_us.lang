@@ -3,3 +3,8 @@ tile.tin_ore.name=Tin Ore
 
 # Items
 item.tin_ingot.name=Tin Ingot
+item.tin_pickaxe.name=Tin Pickaxe
+item.tin_axe.name=Tin Axe
+item.tin_hoe.name=Tin Hoe
+item.tin_shovel.name=Tin Shovel
+item.tin_sword.name=Tin Sword
