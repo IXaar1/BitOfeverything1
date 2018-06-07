@@ -1,36 +1,32 @@
 package com.hipter57.bitofeverything.items;
 
+import com.google.common.collect.Sets;
 import com.hipter57.bitofeverything.Reference;
 import com.hipter57.bitofeverything.util.Utils;
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumHand;
+import net.minecraft.item.ItemTool;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.TextFormatting;
-import net.minecraft.world.World;
+import net.minecraftforge.common.util.EnumHelper;
 
 import java.util.List;
+import java.util.Set;
 
-public class ItemHeart extends Item {
-    public ItemHeart(String unlocalizedName){
+public class ItemSoulSteeler extends ItemTool {
+
+    private static final Set<Block> EFFECTIVE_BLOCKS = Sets.newHashSet(new Block[] {});
+
+    public ItemSoulSteeler(String unlocalizedName) {
+        super(EnumHelper.addToolMaterial(Reference.MODID + ":soul_steeler", 0, 100, 0, 1, 0), EFFECTIVE_BLOCKS);
         this.setUnlocalizedName(unlocalizedName);
         this.setRegistryName(new ResourceLocation(Reference.MODID, unlocalizedName));
     }
 
     @Override
-    public ActionResult<ItemStack> onItemRightClick(ItemStack stack, World world, EntityPlayer player, EnumHand hand) {
-        if(player.getHealth() < player.getMaxHealth()){
-            player.heal(2.0F);
-            player.getHeldItem(hand).stackSize--;
-        }
-        return super.onItemRightClick(stack, world, player, hand);
-    }
-
-    @Override
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
         super.addInformation(stack, playerIn, tooltip, advanced);
-        tooltip.add(TextFormatting.RED + Utils.getLang().localize("heart.tooltip"));
+        tooltip.add(TextFormatting.RED + Utils.getLang().localize("soul_steeler.tooltip"));
     }
 }

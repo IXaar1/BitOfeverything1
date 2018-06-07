@@ -21,12 +21,15 @@ public class ModTools {
     public static ItemSpade tinShovel;
     public static ItemSword tinSword;
 
+    public static ItemSoulSteeler toolSoulSteeler;
+
     public static void init(){
        tinPickaxe = new ItemModPickaxe(tinMaterial, "tin_pickaxe");
        tinAxe = new ItemModAxe(tinMaterial, "tin_axe");
        tinHoe = new ItemModHoe(tinMaterial, "tin_hoe");
        tinShovel = new ItemModShovel(tinMaterial, "tin_shovel");
        tinSword = new ItemModSword(tinMaterial, "tin_sword");
+       toolSoulSteeler = new ItemSoulSteeler("soul_steeler");
     }
 
     public static void register(){
@@ -35,6 +38,8 @@ public class ModTools {
         registerItem(tinHoe);
         registerItem(tinShovel);
         registerItem(tinSword);
+        registerItem(toolSoulSteeler);
+
     }
 
     public static void registerRenders(){
@@ -43,6 +48,7 @@ public class ModTools {
         registerRender(tinHoe);
         registerRender(tinShovel);
         registerRender(tinSword);
+        registerRender(toolSoulSteeler);
     }
 
     public static void registerItem(Item item){

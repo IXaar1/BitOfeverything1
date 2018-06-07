@@ -14,6 +14,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid = Reference.MODID , name = Reference.NAME , version = Reference.VERSION)
 public class BitOfEverything {
 
+    com.hipter57.bitofeverything.handlers.EventHandler eventHandler = new com.hipter57.bitofeverything.handlers.EventHandler();
+
     @Mod.Instance
     public static BitOfEverything instance;
 
@@ -38,6 +40,7 @@ public class BitOfEverything {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
         logger.info("Starting Initialization");
+        eventHandler.registerEvents();
 
     }
 

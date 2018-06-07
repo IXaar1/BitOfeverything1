@@ -8,3 +8,9 @@ item.tin_axe.name=Tin Axe
 item.tin_hoe.name=Tin Hoe
 item.tin_shovel.name=Tin Shovel
 item.tin_sword.name=Tin Sword
+item.heart.name=Heart
+item.soul_steeler.name=Soul Steeler
+
+# Tooltips
+boe.heart.tooltip=Heals the player.
+boe.soul_steeler.tooltip=Steels hearts from other mobs.
